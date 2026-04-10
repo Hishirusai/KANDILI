@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primary_red">#CC2015</color>
+    
+    <!-- MAT ito for the Login Screen Colors -->
+    <color name="card_bg">#40181818</color> <!-- #181818 with 25% opacity -->
+    <color name="input_bg">#80181818</color> <!-- #181818 with 50% opacity -->
+    <color name="white_50">#80FFFFFF</color> <!-- White with 50% opacity -->
+    <color name="shadow_color">#40181818</color> <!-- #181818 with 25% opacity -->
+    <color name="button_orange">#BFFE8E00</color> <!-- #FE8E00 with 75% opacity -->
+    <!-- Add mo opacity percent sa side if meron man other shi like for separate elements may iba iba opacity -->
+</resources>
