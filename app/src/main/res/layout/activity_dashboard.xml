@@ -82,7 +82,7 @@
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="24dp"
                     app:cardElevation="12dp"
-                    app:cardBackgroundColor="#8C4A1E1A">
+                    app:cardBackgroundColor="#A3160D">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -114,7 +114,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="4dp"
-                                    android:text="PAGASA  |  2/24/26 - 2/27/26"
+                                    android:text="PAGASA  |  05/01/26 - 05/04/26"
                                     android:textColor="#F5EAEA"
                                     android:textSize="12sp" />
                             </LinearLayout>
@@ -136,47 +136,51 @@
                             android:padding="8dp">
 
                             <TextView
+                                android:id="@+id/day1"
                                 android:layout_width="0dp"
                                 android:layout_height="42dp"
                                 android:layout_weight="1"
                                 android:layout_marginEnd="6dp"
                                 android:background="@drawable/bg_chip_inactive"
                                 android:gravity="center"
-                                android:text="24 | Mon"
+                                android:text="May 1"
                                 android:textColor="@android:color/white"
                                 android:textSize="14sp" />
 
                             <TextView
+                                android:id="@+id/day2"
                                 android:layout_width="0dp"
                                 android:layout_height="42dp"
                                 android:layout_weight="1"
                                 android:layout_marginEnd="6dp"
                                 android:background="@drawable/bg_chip_active"
                                 android:gravity="center"
-                                android:text="25 | Mon"
+                                android:text="May 2"
                                 android:textColor="@android:color/white"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
 
                             <TextView
+                                android:id="@+id/day3"
                                 android:layout_width="0dp"
                                 android:layout_height="42dp"
                                 android:layout_weight="1"
                                 android:layout_marginEnd="6dp"
                                 android:background="@drawable/bg_chip_active"
                                 android:gravity="center"
-                                android:text="26 | Mon"
+                                android:text="May 3"
                                 android:textColor="@android:color/white"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
 
                             <TextView
+                                android:id="@+id/day4"
                                 android:layout_width="0dp"
                                 android:layout_height="42dp"
                                 android:layout_weight="1"
                                 android:background="@drawable/bg_chip_active"
                                 android:gravity="center"
-                                android:text="27 | Mon"
+                                android:text="May 4"
                                 android:textColor="@android:color/white"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
@@ -194,6 +198,7 @@
                                 android:layout_height="match_parent">
 
                                 <ImageView
+                                    android:id="@+id/ivWeatherBg"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:scaleType="centerCrop"
@@ -271,6 +276,7 @@
                                                 android:textSize="12sp" />
 
                                             <TextView
+                                                android:id="@+id/tvFeelsLike"
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:text="36°"
