@@ -11,4 +11,7 @@
     <color name="shadow_color">#40181818</color> <!-- #181818 with 25% opacity -->
     <color name="button_orange">#BFFE8E00</color> <!-- #FE8E00 with 75% opacity -->
     <!-- Add mo opacity percent sa side if meron man other shi like for separate elements may iba iba opacity -->
+
+    <!-- NAV COLORSS YAYYYYY -->
+    <color name="kandili_red">#CC2015</color>
 </resources>
