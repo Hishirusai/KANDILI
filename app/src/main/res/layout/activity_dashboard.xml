@@ -22,7 +22,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#80B71C0D" />
+            android:background="#66FFFFFF" />
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -96,35 +96,13 @@
                             android:orientation="vertical"
                             android:padding="18dp">
 
-                            <LinearLayout
-                                android:layout_width="match_parent"
+                            <TextView
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:gravity="center_vertical"
-                                android:orientation="horizontal">
-
-                                <LinearLayout
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:orientation="vertical">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="Weather"
-                                        android:textColor="@android:color/white"
-                                        android:textSize="20sp"
-                                        android:textStyle="bold" />
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="4dp"
-                                        android:text="PAGASA  |  05/01/26 - 05/04/26"
-                                        android:textColor="#F5EAEA"
-                                        android:textSize="12sp" />
-                                </LinearLayout>
-                            </LinearLayout>
+                                android:text="Weather"
+                                android:textColor="@android:color/white"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -134,7 +112,6 @@
                                 android:gravity="center"
                                 android:orientation="horizontal"
                                 android:padding="8dp">
-
                                 <TextView android:id="@+id/day1" android:layout_width="0dp" android:layout_height="42dp" android:layout_weight="1" android:layout_marginEnd="6dp" android:background="@drawable/bg_chip_inactive" android:gravity="center" android:text="May 1" android:textColor="@android:color/white" android:textSize="14sp" />
                                 <TextView android:id="@+id/day2" android:layout_width="0dp" android:layout_height="42dp" android:layout_weight="1" android:layout_marginEnd="6dp" android:background="@drawable/bg_chip_inactive" android:gravity="center" android:text="May 2" android:textColor="@android:color/white" android:textSize="14sp" />
                                 <TextView android:id="@+id/day3" android:layout_width="0dp" android:layout_height="42dp" android:layout_weight="1" android:layout_marginEnd="6dp" android:background="@drawable/bg_chip_inactive" android:gravity="center" android:text="May 3" android:textColor="@android:color/white" android:textSize="14sp" />
@@ -145,33 +122,40 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="240dp"
                                 android:layout_marginTop="18dp"
-                                app:cardCornerRadius="20dp"
-                                app:cardElevation="10dp">
+                                app:cardCornerRadius="24dp"
+                                app:cardElevation="0dp">
 
-                                <FrameLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent">
+                                <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+
                                     <ImageView android:id="@+id/ivWeatherBg" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:src="@drawable/weather_sunny_bg" />
-                                    <View android:layout_width="match_parent" android:layout_height="match_parent" android:background="#3399CCFF" />
-                                    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:padding="16dp">
-                                        <TextView android:id="@+id/tvWeatherType" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SUNNY" android:textColor="@android:color/white" android:textSize="28sp" android:textStyle="bold" />
-                                        <TextView android:id="@+id/tvTemp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="32°" android:textColor="@android:color/white" android:textSize="64sp" android:textStyle="bold" />
-                                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:background="#55A0A0A0" android:orientation="horizontal" android:padding="14dp">
-                                            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
-                                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ZAMBOANGA" android:textColor="@android:color/white" android:textSize="12sp" />
-                                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CITY" android:textColor="@android:color/white" android:textSize="18sp" />
-                                            </LinearLayout>
-                                            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
-                                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Feels like" android:textColor="@android:color/white" android:textSize="12sp" />
-                                                <TextView android:id="@+id/tvFeelsLike" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="36°" android:textColor="@android:color/white" android:textSize="28sp" android:textStyle="bold" />
-                                            </LinearLayout>
-                                            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
-                                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Wind" android:textColor="@android:color/white" android:textSize="12sp" />
-                                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="25 km/h" android:textColor="@android:color/white" android:textSize="18sp" android:textStyle="bold" />
-                                            </LinearLayout>
+
+                                    <TextView android:id="@+id/tvWeatherType" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="20dp" android:layout_marginTop="20dp" android:text="SUNNY" android:textColor="@android:color/white" android:textSize="32sp" android:textStyle="bold" />
+                                    <TextView android:id="@+id/tvTemp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:layout_marginTop="10dp" android:layout_marginEnd="20dp" android:text="32°" android:textColor="@android:color/white" android:textSize="72sp" android:textStyle="bold" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="100dp"
+                                        android:layout_alignParentBottom="true"
+                                        android:background="#90547E91"
+                                        android:orientation="horizontal"
+                                        android:gravity="center_vertical">
+
+                                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:orientation="vertical" android:gravity="center">
+                                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ZAMBOANGA" android:textColor="@android:color/white" android:textSize="14sp" />
+                                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CITY" android:textColor="@android:color/white" android:textSize="24sp" />
                                         </LinearLayout>
-                                    </RelativeLayout>
-                                </FrameLayout>
+
+                                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Feels like" android:textColor="@android:color/white" android:textSize="12sp" />
+                                            <TextView android:id="@+id/tvFeelsLike" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="36°" android:textColor="@android:color/white" android:textSize="36sp" android:textStyle="bold" />
+                                        </LinearLayout>
+
+                                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Average Wind" android:textColor="@android:color/white" android:textSize="11sp" />
+                                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="25\nkm/h" android:textColor="@android:color/white" android:textSize="16sp" android:textStyle="bold" android:textAlignment="center"/>
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </RelativeLayout>
                             </androidx.cardview.widget.CardView>
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
@@ -200,14 +184,6 @@
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="6dp"
-                                android:text="PAGASA | 9:41 PM"
-                                android:textColor="#F1E4E4"
-                                android:textSize="13sp" />
-
-                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="42dp"
                                 android:layout_marginTop="18dp"
@@ -232,36 +208,24 @@
                                     android:orientation="vertical"
                                     android:padding="18dp">
 
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:gravity="center"
-                                        android:orientation="horizontal">
-                                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="1 AM\n☁ 25°" android:textColor="@android:color/white" android:textSize="12sp" />
-                                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="2 AM\n☁ 25°" android:textColor="@android:color/white" android:textSize="12sp" />
-                                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="3 AM\n☁ 23°" android:textColor="@android:color/white" android:textSize="12sp" />
-                                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="4 AM\n☁ 22°" android:textColor="@android:color/white" android:textSize="12sp" />
-                                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="5 AM\n☁ 20°" android:textColor="@android:color/white" android:textSize="12sp" />
+                                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="1 AM\n☁ 25°" android:textColor="@android:color/white" android:textSize="11sp" />
+                                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="2 AM\n☁ 25°" android:textColor="@android:color/white" android:textSize="11sp" />
+                                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="3 AM\n☁ 23°" android:textColor="@android:color/white" android:textSize="11sp" />
+                                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="4 AM\n☁ 22°" android:textColor="@android:color/white" android:textSize="11sp" />
+                                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="5 AM\n☁ 20°" android:textColor="@android:color/white" android:textSize="11sp" />
                                     </LinearLayout>
 
-                                    <View
-                                        android:layout_width="match_parent"
-                                        android:layout_height="1dp"
-                                        android:layout_marginTop="14dp"
-                                        android:layout_marginBottom="14dp"
-                                        android:background="#80FFFFFF" />
+                                    <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="12dp" android:layout_marginBottom="12dp" android:background="#40FFFFFF" />
 
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:gravity="center"
-                                        android:orientation="horizontal">
-                                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="6 AM\n☁ 25°" android:textColor="@android:color/white" android:textSize="12sp" />
-                                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="7 AM\n☁ 25°" android:textColor="@android:color/white" android:textSize="12sp" />
-                                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="8 AM\n☁ 23°" android:textColor="@android:color/white" android:textSize="12sp" />
-                                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="NOW\n☁ 22°" android:textColor="@android:color/white" android:textSize="12sp" />
-                                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="10 AM\n☁ 20°" android:textColor="@android:color/white" android:textSize="12sp" />
+                                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="6 AM\n☁ 25°" android:textColor="@android:color/white" android:textSize="11sp" />
+                                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="7 AM\n☁ 25°" android:textColor="@android:color/white" android:textSize="11sp" />
+                                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="8 AM\n☁ 23°" android:textColor="@android:color/white" android:textSize="11sp" />
+                                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="9 AM\n☁ 22°" android:textColor="@android:color/white" android:textSize="11sp" android:textStyle="bold" />
+                                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="10 AM\n☁ 20°" android:textColor="@android:color/white" android:textSize="11sp" />
                                     </LinearLayout>
+
                                 </LinearLayout>
                             </androidx.cardview.widget.CardView>
                         </LinearLayout>
