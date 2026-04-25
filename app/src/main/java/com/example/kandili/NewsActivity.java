@@ -44,9 +44,27 @@ public class NewsActivity extends AppCompatActivity {
         }
 
         Button btnViewMore1 = findViewById(R.id.btnViewMore1);
+        Button btnViewMore2 = findViewById(R.id.btnViewMore2);
+        Button btnViewMore3 = findViewById(R.id.btnViewMore3);
         if (btnViewMore1 != null) {
             btnViewMore1.setOnClickListener(v -> {
                 String url = "https://pia.gov.ph/news/zamboanga-intensifies-water-conservation-efforts-amid-rising-demand/";
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(url));
+                startActivity(intent);
+            });
+        }
+        if (btnViewMore2 != null) {
+            btnViewMore2.setOnClickListener(v -> {
+                String url = "https://mindanews.com/top-stories/2026/04/zamboanga-city-declares-state-of-calamity-due-to-oil-crisis/";
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(url));
+                startActivity(intent);
+            });
+        }
+        if (btnViewMore3 != null) {
+            btnViewMore3.setOnClickListener(v -> {
+                String url = "https://www.sunstar.com.ph/zamboanga/kalis-brigade-troops-further-strengthens-disaster-preparedness";
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(url));
                 startActivity(intent);

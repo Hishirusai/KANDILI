@@ -125,9 +125,9 @@
                             <FrameLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="220dp">
-                                <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/news2" android:scaleType="centerCrop" />
+                                <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/news2new" android:scaleType="centerCrop" />
                                 <View android:layout_width="match_parent" android:layout_height="35dp" android:layout_gravity="top" android:rotation="180" android:background="@drawable/bg_news_image_fade" />
-                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="top|center_horizontal" android:layout_marginTop="12dp" android:text="FEBRUARY 15, 2026" android:textColor="@android:color/white" android:textSize="13sp" android:textStyle="bold" />
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="top|center_horizontal" android:layout_marginTop="12dp" android:text="APRIL 08, 2026" android:textColor="@android:color/white" android:textSize="13sp" android:textStyle="bold" />
                             </FrameLayout>
 
                             <LinearLayout
@@ -137,8 +137,8 @@
                                 android:orientation="vertical"
                                 android:padding="18dp"
                                 android:gravity="center">
-                                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="&quot;Landslide reported in the Abong abong district near the A4 highway. Road is closed until further notice. Seek alternative routes.&quot;" android:textAlignment="center" android:textColor="@android:color/white" android:textSize="14sp" />
-                                <androidx.appcompat.widget.AppCompatButton android:layout_width="230dp" android:layout_height="44dp" android:layout_marginTop="16dp" android:background="@drawable/bg_view_more" android:text="VIEW MORE" android:textAllCaps="false" android:textColor="@android:color/white" android:textStyle="bold" />
+                                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="&quot;Zamboanga City declares ‘state of calamity’ due to oil crisis.&quot;" android:textAlignment="center" android:textColor="@android:color/white" android:textSize="14sp" />
+                                <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnViewMore2" android:layout_width="230dp" android:layout_height="44dp" android:layout_marginTop="16dp" android:background="@drawable/bg_view_more" android:text="VIEW MORE" android:textAllCaps="false" android:textColor="@android:color/white" android:textStyle="bold" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -151,9 +151,9 @@
                             <FrameLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="220dp">
-                                <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/news3" android:scaleType="centerCrop" />
+                                <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/news3new" android:scaleType="centerCrop" />
                                 <View android:layout_width="match_parent" android:layout_height="35dp" android:layout_gravity="top" android:rotation="180" android:background="@drawable/bg_news_image_fade" />
-                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="top|center_horizontal" android:layout_marginTop="12dp" android:text="FEBRUARY 22, 2026" android:textColor="@android:color/white" android:textSize="13sp" android:textStyle="bold" />
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="top|center_horizontal" android:layout_marginTop="12dp" android:text="MARCH 17, 2026" android:textColor="@android:color/white" android:textSize="13sp" android:textStyle="bold" />
                             </FrameLayout>
 
                             <LinearLayout
@@ -163,8 +163,8 @@
                                 android:orientation="vertical"
                                 android:padding="18dp"
                                 android:gravity="center">
-                                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="&quot;Flash flood warning issued for the Cawa-cawa. Heavy rainfall is expected in the next 24 hours. Stay tuned for further updates.&quot;" android:textAlignment="center" android:textColor="@android:color/white" android:textSize="14sp" />
-                                <androidx.appcompat.widget.AppCompatButton android:layout_width="230dp" android:layout_height="44dp" android:layout_marginTop="16dp" android:background="@drawable/bg_view_more" android:text="VIEW MORE" android:textAllCaps="false" android:textColor="@android:color/white" android:textStyle="bold" />
+                                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="&quot;Kalis Brigade troops further strengthens disaster preparedness.&quot;" android:textAlignment="center" android:textColor="@android:color/white" android:textSize="14sp" />
+                                <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnViewMore3" android:layout_width="230dp" android:layout_height="44dp" android:layout_marginTop="16dp" android:background="@drawable/bg_view_more" android:text="VIEW MORE" android:textAllCaps="false" android:textColor="@android:color/white" android:textStyle="bold" />
                             </LinearLayout>
                         </LinearLayout>
 
