@@ -95,10 +95,7 @@
                             android:background="@drawable/bg_hotlines_title"
                             android:gravity="center_vertical"
                             android:orientation="horizontal"
-                            android:paddingStart="18dp"
-                            android:paddingTop="16dp"
-                            android:paddingEnd="18dp"
-                            android:paddingBottom="16dp">
+                            android:padding="16dp">
 
                             <ImageView
                                 android:layout_width="44dp"
@@ -117,218 +114,75 @@
                                 android:lineSpacingExtra="2dp" />
                         </LinearLayout>
 
-                        <Space
-                            android:layout_width="match_parent"
-                            android:layout_height="14dp" />
+                        <Space android:layout_width="match_parent" android:layout_height="14dp" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_vertical"
                             android:orientation="horizontal">
-
-                            <ImageView
-                                android:layout_width="36dp"
-                                android:layout_height="36dp"
-                                android:src="@drawable/ic_menu"
-                                app:tint="@android:color/white" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="10dp"
-                                android:text="Barangay:"
-                                android:textColor="@android:color/white"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="6dp"
-                                android:text="San Roque"
-                                android:textColor="@android:color/white"
-                                android:textSize="20sp" />
+                            <ImageView android:layout_width="36dp" android:layout_height="36dp" android:src="@drawable/ic_menu" app:tint="@android:color/white" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="10dp" android:text="Barangay:" android:textColor="@android:color/white" android:textSize="20sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="6dp" android:text="San Roque" android:textColor="@android:color/white" android:textSize="20sp" />
                         </LinearLayout>
 
-                        <Space
-                            android:layout_width="match_parent"
-                            android:layout_height="12dp" />
+                        <Space android:layout_width="match_parent" android:layout_height="12dp" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="12dp"
-                                android:background="@drawable/bg_hotline_row"
-                                android:gravity="center_vertical"
-                                android:minHeight="54dp"
-                                android:orientation="horizontal"
-                                android:paddingStart="22dp"
-                                android:paddingEnd="22dp">
-
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="Assistance"
-                                    android:textColor="#222222"
-                                    android:textSize="18sp" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="992-2345"
-                                    android:textColor="#244BFF"
-                                    android:textSize="18sp"
-                                    android:textStyle="bold" />
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" android:background="@drawable/bg_hotline_row" android:gravity="center_vertical" android:minHeight="54dp" android:padding="10dp" android:paddingStart="22dp">
+                                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Assistance" android:textColor="#222222" android:textSize="18sp" />
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="992-2345" android:textColor="#244BFF" android:textSize="18sp" android:textStyle="bold" />
                             </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:background="@drawable/bg_hotline_row"
-                                android:gravity="center_vertical"
-                                android:minHeight="54dp"
-                                android:orientation="horizontal"
-                                android:paddingStart="22dp"
-                                android:paddingEnd="22dp">
-
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="Help Desk"
-                                    android:textColor="#222222"
-                                    android:textSize="18sp" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="992-1345"
-                                    android:textColor="#244BFF"
-                                    android:textSize="18sp"
-                                    android:textStyle="bold" />
+                            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/bg_hotline_row" android:gravity="center_vertical" android:minHeight="54dp" android:padding="10dp" android:paddingStart="22dp">
+                                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Help Desk" android:textColor="#222222" android:textSize="18sp" />
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="992-1345" android:textColor="#244BFF" android:textSize="18sp" android:textStyle="bold" />
                             </LinearLayout>
                         </LinearLayout>
 
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="8dp"
-                            android:layout_marginTop="16dp"
-                            android:layout_marginBottom="16dp"
-                            android:background="@drawable/bg_hotlines_divider" />
+                        <View android:layout_width="match_parent" android:layout_height="8dp" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:background="@drawable/bg_hotlines_divider" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="ZCDRRMO"
-                            android:textColor="@android:color/white"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="12dp"
-                            android:background="@drawable/bg_hotline_row"
-                            android:gravity="center"
-                            android:minHeight="54dp"
-                            android:paddingStart="22dp"
-                            android:paddingEnd="22dp">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="992-5345"
-                                android:textColor="#244BFF"
-                                android:textSize="18sp"
-                                android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Patrol 117" android:textColor="@android:color/white" android:textSize="20sp" android:textStyle="bold" />
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/bg_hotline_row" android:gravity="center" android:minHeight="54dp" android:padding="10dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="992-1345" android:textColor="#244BFF" android:textSize="18sp" android:textStyle="bold" />
                         </LinearLayout>
 
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="8dp"
-                            android:layout_marginTop="16dp"
-                            android:layout_marginBottom="16dp"
-                            android:background="@drawable/bg_hotlines_divider" />
+                        <Space android:layout_width="match_parent" android:layout_height="14dp" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ZCDRRMO" android:textColor="@android:color/white" android:textSize="20sp" android:textStyle="bold" />
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/bg_hotline_row" android:gravity="center" android:minHeight="54dp" android:padding="10dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="992-5345" android:textColor="#244BFF" android:textSize="18sp" android:textStyle="bold" />
+                        </LinearLayout>
 
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:layout_marginEnd="10dp"
-                                android:orientation="vertical">
+                        <Space android:layout_width="match_parent" android:layout_height="14dp" />
 
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_horizontal"
-                                    android:text="Hospitals"
-                                    android:textColor="@android:color/white"
-                                    android:textSize="20sp"
-                                    android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:text="Philippine Coast Guard" android:textColor="@android:color/white" android:textSize="20sp" android:textStyle="bold" />
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/bg_hotline_row" android:gravity="center_vertical" android:minHeight="54dp" android:padding="10dp" android:paddingStart="22dp">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="Rescue Team" android:textColor="#111111" android:textSize="18sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="992-6745" android:textColor="#244BFF" android:textSize="18sp" android:textStyle="bold" />
+                        </LinearLayout>
 
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="14dp"
-                                    android:background="@drawable/bg_hotline_row"
-                                    android:gravity="center_vertical"
-                                    android:minHeight="68dp"
-                                    android:paddingStart="12dp"
-                                    android:paddingEnd="12dp">
+                        <View android:layout_width="match_parent" android:layout_height="8dp" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:background="@drawable/bg_hotlines_divider" />
 
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="992-6795"
-                                        android:textColor="#244BFF"
-                                        android:textSize="18sp"
-                                        android:textStyle="bold" />
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginEnd="10dp" android:orientation="vertical">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:text="Hospitals" android:textColor="@android:color/white" android:textSize="20sp" android:textStyle="bold" />
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:background="@drawable/bg_hotline_row" android:gravity="center_vertical" android:minHeight="68dp" android:padding="10dp">
+                                    <ImageView android:layout_width="42dp" android:layout_height="42dp" android:src="@drawable/hospital_logo1" android:scaleType="fitCenter" />
+                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="10dp" android:text="992-6795" android:textColor="#244BFF" android:textSize="18sp" android:textStyle="bold" />
+                                </LinearLayout>
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/bg_hotline_row" android:gravity="center_vertical" android:minHeight="68dp" android:padding="10dp">
+                                    <ImageView android:layout_width="42dp" android:layout_height="42dp" android:src="@drawable/hospital_logo2" android:scaleType="fitCenter" />
+                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="10dp" android:text="992-6990" android:textColor="#244BFF" android:textSize="18sp" android:textStyle="bold" />
                                 </LinearLayout>
                             </LinearLayout>
 
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:layout_marginStart="10dp"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_horizontal"
-                                    android:text="Ambulance"
-                                    android:textColor="@android:color/white"
-                                    android:textSize="20sp"
-                                    android:textStyle="bold" />
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="14dp"
-                                    android:background="@drawable/bg_hotline_row"
-                                    android:gravity="center"
-                                    android:minHeight="68dp">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="992-6099"
-                                        android:textColor="#244BFF"
-                                        android:textSize="18sp"
-                                        android:textStyle="bold" />
+                            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="10dp" android:orientation="vertical">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:text="Ambulances" android:textColor="@android:color/white" android:textSize="20sp" android:textStyle="bold" />
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:background="@drawable/bg_hotline_row" android:gravity="center" android:minHeight="68dp" android:padding="10dp">
+                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="992-6099" android:textColor="#244BFF" android:textSize="18sp" android:textStyle="bold" />
+                                </LinearLayout>
+                                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/bg_hotline_row" android:gravity="center" android:minHeight="68dp" android:padding="10dp">
+                                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="992-0842" android:textColor="#244BFF" android:textSize="18sp" android:textStyle="bold" />
                                 </LinearLayout>
                             </LinearLayout>
                         </LinearLayout>
@@ -337,4 +191,24 @@
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
     </FrameLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#181818"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_menu"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"
+        app:itemIconSize="28dp"
+        app:itemIconPadding="24dp"
+        app:itemTextAppearance="@style/NavMenuItemStyle"
+        app:itemShapeInsetStart="0dp"
+        app:itemShapeInsetEnd="0dp"
+        app:itemHorizontalPadding="24dp"
+        app:itemVerticalPadding="20dp"
+        app:itemBackground="@drawable/nav_item_selector" />
+
 </androidx.drawerlayout.widget.DrawerLayout>

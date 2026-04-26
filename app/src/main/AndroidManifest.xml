@@ -41,6 +41,18 @@
             android:name=".NewsActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".HotlinesActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".DisastersActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>

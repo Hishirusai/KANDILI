@@ -37,6 +37,17 @@ public class NewsActivity extends AppCompatActivity {
                 if (id == R.id.nav_dashboard) {
                     startActivity(new Intent(NewsActivity.this, DashboardActivity.class));
                     finish();
+                } else if (id == R.id.nav_disasters) {
+                    startActivity(new Intent(NewsActivity.this, DisastersActivity.class));
+                    finish();
+                } else if (id == R.id.nav_hotlines) {
+                    startActivity(new Intent(NewsActivity.this, HotlinesActivity.class));
+                    finish();
+                } else if (id == R.id.nav_settings) {
+                    startActivity(new Intent(NewsActivity.this, SettingsActivity.class));
+                    finish();
+                } else if (id == R.id.nav_logout) {
+                    finish();
                 }
                 drawerLayout.closeDrawers();
                 return true;

@@ -219,4 +219,24 @@
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
     </FrameLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#181818"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_menu"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"
+        app:itemIconSize="28dp"
+        app:itemIconPadding="24dp"
+        app:itemTextAppearance="@style/NavMenuItemStyle"
+        app:itemShapeInsetStart="0dp"
+        app:itemShapeInsetEnd="0dp"
+        app:itemHorizontalPadding="24dp"
+        app:itemVerticalPadding="20dp"
+        app:itemBackground="@drawable/nav_item_selector" />
+
 </androidx.drawerlayout.widget.DrawerLayout>
