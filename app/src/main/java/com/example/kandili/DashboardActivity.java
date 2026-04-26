@@ -38,20 +38,16 @@ public class DashboardActivity extends AppCompatActivity {
             if (id == R.id.nav_news) {
                 startActivity(new Intent(DashboardActivity.this, NewsActivity.class));
                 finish();
-            }
-            else if (id == R.id.nav_disasters) {
+            } else if (id == R.id.nav_disasters) {
                 startActivity(new Intent(DashboardActivity.this, DisastersActivity.class));
                 finish();
-            }
-            else if (id == R.id.nav_hotlines) {
+            } else if (id == R.id.nav_hotlines) {
                 startActivity(new Intent(DashboardActivity.this, HotlinesActivity.class));
                 finish();
-            }
-            else if (id == R.id.nav_settings) {
+            } else if (id == R.id.nav_settings) {
                 startActivity(new Intent(DashboardActivity.this, SettingsActivity.class));
                 finish();
-            }
-            else if (id == R.id.nav_logout) {
+            } else if (id == R.id.nav_logout) {
                 finish();
             }
 

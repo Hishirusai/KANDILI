@@ -122,6 +122,7 @@
                             android:layout_height="14dp" />
 
                         <FrameLayout
+                            android:id="@+id/typhoonGuideCard"
                             android:layout_width="match_parent"
                             android:layout_height="250dp"
                             android:background="@drawable/bg_disaster_image_card"
@@ -187,6 +188,7 @@
                             android:layout_height="14dp" />
 
                         <FrameLayout
+                            android:id="@+id/floodGuideCard"
                             android:layout_width="match_parent"
                             android:layout_height="250dp"
                             android:background="@drawable/bg_disaster_image_card"
