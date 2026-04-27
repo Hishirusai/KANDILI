@@ -27,7 +27,7 @@
         <RelativeLayout
             android:id="@+id/stickyHeader"
             android:layout_width="match_parent"
-            android:layout_height="130dp"
+            android:layout_height="140dp"
             android:layout_alignParentTop="true"
             android:background="@drawable/bg_header_dashboard"
             android:paddingTop="20dp"
@@ -49,17 +49,18 @@
                 android:layout_toEndOf="@id/menuIcon"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="16dp"
-                android:text="Disaster Guides"
+                android:text="Disaster\nGuides"
                 android:textColor="@android:color/white"
-                android:textSize="21sp"
-                android:textStyle="bold" />
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:lineSpacingExtra="2dp" />
 
             <ImageView
-                android:layout_width="120dp"
-                android:layout_height="60dp"
+                android:layout_width="160dp"
+                android:layout_height="90dp"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
-                android:scaleType="centerInside"
+                android:scaleType="centerCrop"
                 android:src="@drawable/kandili" />
         </RelativeLayout>
 
@@ -199,6 +200,10 @@
         app:itemIconSize="28dp"
         app:itemIconPadding="24dp"
         app:itemTextAppearance="@style/NavMenuItemStyle"
+        app:itemShapeInsetStart="0dp"
+        app:itemShapeInsetEnd="0dp"
+        app:itemHorizontalPadding="24dp"
+        app:itemVerticalPadding="20dp"
         app:itemBackground="@drawable/nav_item_selector" />
 
 </androidx.drawerlayout.widget.DrawerLayout>
