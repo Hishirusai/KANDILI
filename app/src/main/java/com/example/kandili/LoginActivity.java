@@ -1,20 +1,19 @@
 package com.example.kandili;
 
 import android.content.Intent;
-import android.graphics.RenderEffect;
-import android.graphics.Shader;
-import android.os.Build;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
 public class LoginActivity extends AppCompatActivity {
+
+    private UserPreferences userPrefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,17 +21,13 @@ public class LoginActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
 
+        // Initialize user preferences
+        userPrefs = new UserPreferences(this);
+
         // 1. Setup Background Effects (Keeping your original work)
         ViewFlipper viewFlipper = findViewById(R.id.viewFlipper);
         if (viewFlipper != null) {
             viewFlipper.startFlipping();
-        }
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-            View loginCard = findViewById(R.id.loginCard);
-            if (loginCard != null) {
-                loginCard.setRenderEffect(RenderEffect.createBlurEffect(20f, 20f, Shader.TileMode.CLAMP));
-            }
         }
 
         // 2. Initialize Login Views
@@ -40,6 +35,7 @@ public class LoginActivity extends AppCompatActivity {
         EditText passwordInput = findViewById(R.id.passwordInput);
         AppCompatButton loginBtn = findViewById(R.id.loginBtn);
         AppCompatButton signUpBtn = findViewById(R.id.signUpBtn);
+        android.widget.TextView forgotPasswordText = findViewById(R.id.forgotPasswordText);
 
         // 3. Login Logic
         if (loginBtn != null) {
@@ -47,14 +43,12 @@ public class LoginActivity extends AppCompatActivity {
                 String email = emailInput.getText().toString().trim();
                 String password = passwordInput.getText().toString().trim();
 
-                // Hardcoded Credentials
-                if (email.equals("johndoe@gmail.com") && password.equals("12345678")) {
+                // Validate credentials using UserPreferences
+                if (userPrefs.validateCredentials(email, password)) {
                     Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show();
 
-                    // Redirect to Dashboard
-                    Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
-                    startActivity(intent);
-                    finish(); // Prevents user from going back to login screen
+                    // Show Terms and Services Dialog
+                    showTermsAndServicesDialog();
                 } else {
                     Toast.makeText(this, "Invalid Email or Password", Toast.LENGTH_SHORT).show();
                 }
@@ -68,5 +62,47 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             });
         }
+
+        // 5. Forgot Password Navigation
+        if (forgotPasswordText != null) {
+            forgotPasswordText.setOnClickListener(v -> {
+                Intent intent = new Intent(LoginActivity.this, PasswordVerificationActivity.class);
+                startActivity(intent);
+            });
+        }
+    }
+
+    /**
+     * Show Terms and Services Dialog
+     * User can agree and proceed to dashboard or disagree and exit the app
+     */
+    private void showTermsAndServicesDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Terms and Services");
+        builder.setMessage(
+                "KANDILI collects location data to enable real-time disaster notifications and proximity-based safety recommendations. Location data is used to check if facilities are closed or not in use. This ensures you are warned of hazards (like rains and floods) before you even open your phone.");
+
+        // Agree Button - Navigate to Dashboard
+        builder.setPositiveButton("I Agree", (dialog, which) -> {
+            dialog.dismiss();
+            // Redirect to Dashboard
+            Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
+            startActivity(intent);
+            finish(); // Prevents user from going back to login screen
+        });
+
+        // Disagree Button - Close the app
+        builder.setNegativeButton("I Disagree", (dialog, which) -> {
+            dialog.dismiss();
+            // Close the application
+            finishAffinity(); // Closes all activities in the task stack
+        });
+
+        // Prevent dismissal by clicking outside the dialog
+        builder.setCancelable(false);
+
+        // Show the dialog
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 }

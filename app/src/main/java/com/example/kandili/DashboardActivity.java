@@ -16,11 +16,15 @@ public class DashboardActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     private TextView day1, day2, day3, day4, tvWeatherType, tvTemp, tvFeelsLike;
     private ImageView ivWeatherBg;
+    private UserPreferences userPrefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+
+        // Initialize user preferences
+        userPrefs = new UserPreferences(this);
 
         // --- 1. SIDEBAR & REDIRECTION LOGIC ---
         drawerLayout = findViewById(R.id.drawer_layout);
@@ -31,6 +35,9 @@ public class DashboardActivity extends AppCompatActivity {
 
         menuIcon.setOnClickListener(v -> drawerLayout.openDrawer(GravityCompat.START));
         navigationView.setCheckedItem(R.id.nav_dashboard);
+
+        // Update navigation header with current email
+        updateNavigationHeader(navigationView);
 
         navigationView.setNavigationItemSelectedListener(item -> {
             int id = item.getItemId();
@@ -48,6 +55,8 @@ public class DashboardActivity extends AppCompatActivity {
                 startActivity(new Intent(DashboardActivity.this, SettingsActivity.class));
                 finish();
             } else if (id == R.id.nav_logout) {
+                // Redirect to splash screen and login
+                startActivity(new Intent(DashboardActivity.this, SplashActivity.class));
                 finish();
             }
 
@@ -83,5 +92,17 @@ public class DashboardActivity extends AppCompatActivity {
         day3.setBackgroundResource(R.drawable.bg_chip_inactive);
         day4.setBackgroundResource(R.drawable.bg_chip_inactive);
         active.setBackgroundResource(R.drawable.bg_chip_active);
+    }
+
+    /**
+     * Update navigation header with current user email
+     */
+    private void updateNavigationHeader(NavigationView navigationView) {
+        if (navigationView != null) {
+            TextView emailText = navigationView.getHeaderView(0).findViewById(R.id.navHeaderEmail);
+            if (emailText != null) {
+                emailText.setText(userPrefs.getEmail());
+            }
+        }
     }
 }

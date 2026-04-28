@@ -27,7 +27,8 @@
         android:layout_height="wrap_content"
         android:text="johndoe@gmail.com"
         android:textColor="#AAAAAA"
-        android:textSize="12sp" />
+        android:textSize="12sp"
+        android:id="@+id/navHeaderEmail" />
 
     <View
         android:layout_width="match_parent"

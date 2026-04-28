@@ -16,6 +16,10 @@ public class SplashActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_splash);
 
+        // Reset user credentials to defaults on app start (for demo purposes)
+        UserPreferences userPrefs = new UserPreferences(this);
+        userPrefs.resetToDefaults();
+
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
             Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
             startActivity(intent);

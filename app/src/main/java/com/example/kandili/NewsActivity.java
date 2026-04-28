@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.core.view.GravityCompat;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import com.google.android.material.navigation.NavigationView;
@@ -13,11 +14,15 @@ import com.google.android.material.navigation.NavigationView;
 public class NewsActivity extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
+    private UserPreferences userPrefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
+
+        // Initialize user preferences
+        userPrefs = new UserPreferences(this);
 
         drawerLayout = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -31,6 +36,9 @@ public class NewsActivity extends AppCompatActivity {
 
         if (navigationView != null) {
             navigationView.setCheckedItem(R.id.nav_news);
+
+            // Update navigation header with current email
+            updateNavigationHeader(navigationView);
 
             navigationView.setNavigationItemSelectedListener(item -> {
                 int id = item.getItemId();
@@ -47,6 +55,8 @@ public class NewsActivity extends AppCompatActivity {
                     startActivity(new Intent(NewsActivity.this, SettingsActivity.class));
                     finish();
                 } else if (id == R.id.nav_logout) {
+                    // Redirect to splash screen and login
+                    startActivity(new Intent(NewsActivity.this, SplashActivity.class));
                     finish();
                 }
                 drawerLayout.closeDrawers();
@@ -80,6 +90,18 @@ public class NewsActivity extends AppCompatActivity {
                 intent.setData(Uri.parse(url));
                 startActivity(intent);
             });
+        }
+    }
+
+    /**
+     * Update navigation header with current user email
+     */
+    private void updateNavigationHeader(NavigationView navigationView) {
+        if (navigationView != null) {
+            TextView emailText = navigationView.getHeaderView(0).findViewById(R.id.navHeaderEmail);
+            if (emailText != null) {
+                emailText.setText(userPrefs.getEmail());
+            }
         }
     }
 }

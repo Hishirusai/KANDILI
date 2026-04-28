@@ -6,9 +6,10 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
     tools:context=".NewsActivity">
 
-    <FrameLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -23,156 +24,155 @@
             android:layout_height="match_parent"
             android:background="#66FFFFFF" />
 
+        <RelativeLayout
+            android:id="@+id/stickyHeader"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bg_header_dashboard"
+            android:paddingTop="20dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:elevation="8dp">
+
+            <ImageView
+                android:id="@+id/menuIcon"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_menu"
+                app:tint="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/menuIcon"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:text="News"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="160dp"
+                android:layout_height="90dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/kandili" />
+        </RelativeLayout>
+
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fillViewport="true">
+            android:layout_below="@+id/stickyHeader"
+            android:fillViewport="true"
+            android:clipToPadding="false">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="40dp">
 
-                <RelativeLayout
+                <Space
                     android:layout_width="match_parent"
-                    android:layout_height="140dp"
-                    android:background="@drawable/bg_header_dashboard"
-                    android:paddingTop="20dp"
-                    android:paddingStart="24dp"
-                    android:paddingEnd="24dp">
-
-                    <ImageView
-                        android:id="@+id/menuIcon"
-                        android:layout_width="34dp"
-                        android:layout_height="34dp"
-                        android:layout_centerVertical="true"
-                        android:src="@drawable/ic_menu"
-                        app:tint="@android:color/white" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_toEndOf="@id/menuIcon"
-                        android:layout_centerVertical="true"
-                        android:layout_marginStart="16dp"
-                        android:text="News"
-                        android:textColor="@android:color/white"
-                        android:textSize="22sp"
-                        android:textStyle="bold" />
-
-                    <ImageView
-                        android:layout_width="160dp"
-                        android:layout_height="90dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/kandili" />
-                </RelativeLayout>
+                    android:layout_height="12dp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/bg_news_container"
                     android:orientation="vertical"
-                    android:paddingStart="12dp"
-                    android:paddingEnd="12dp"
-                    android:paddingBottom="24dp">
-
-                    <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="12dp" />
+                    android:padding="12dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/bg_news_container"
-                        android:orientation="vertical"
-                        android:padding="12dp">
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/bg_news_card_outer"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="220dp">
+                            <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/news1" android:scaleType="centerCrop" />
+                            <View android:layout_width="match_parent" android:layout_height="35dp" android:layout_gravity="top" android:rotation="180" android:background="@drawable/bg_news_image_fade" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="top|center_horizontal" android:layout_marginTop="12dp" android:text="APRIL 21, 2026" android:textColor="@android:color/white" android:textSize="13sp" android:textStyle="bold" />
+                        </FrameLayout>
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="16dp"
-                            android:background="@drawable/bg_news_card_outer"
-                            android:orientation="vertical">
-
-                            <FrameLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="220dp">
-                                <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/news1" android:scaleType="centerCrop" />
-                                <View android:layout_width="match_parent" android:layout_height="35dp" android:layout_gravity="top" android:rotation="180" android:background="@drawable/bg_news_image_fade" />
-                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="top|center_horizontal" android:layout_marginTop="12dp" android:text="APRIL 21, 2026" android:textColor="@android:color/white" android:textSize="13sp" android:textStyle="bold" />
-                            </FrameLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:background="@drawable/bg_news_text_section"
-                                android:orientation="vertical"
-                                android:padding="18dp"
-                                android:gravity="center">
-                                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="&quot;The Zamboanga City Water District (ZCWD) has strengthened its water conservation measures as demand increases amid recent high heat index levels of 40 to 42 degrees Celsius, according to state weather agency&quot;" android:textAlignment="center" android:textColor="@android:color/white" android:textSize="14sp" />
-                                <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnViewMore1" android:layout_width="230dp" android:layout_height="44dp" android:layout_marginTop="16dp" android:background="@drawable/bg_view_more" android:text="VIEW MORE" android:textAllCaps="false" android:textColor="@android:color/white" android:textStyle="bold" />
-                            </LinearLayout>
+                            android:background="@drawable/bg_news_text_section"
+                            android:orientation="vertical"
+                            android:padding="18dp"
+                            android:gravity="center">
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="&quot;The Zamboanga City Water District (ZCWD) has strengthened its water conservation measures as demand increases amid recent high heat index levels of 40 to 42 degrees Celsius, according to state weather agency&quot;" android:textAlignment="center" android:textColor="@android:color/white" android:textSize="14sp" />
+                            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnViewMore1" android:layout_width="230dp" android:layout_height="44dp" android:layout_marginTop="16dp" android:background="@drawable/bg_view_more" android:text="VIEW MORE" android:textAllCaps="false" android:textColor="@android:color/white" android:textStyle="bold" />
                         </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="16dp"
-                            android:background="@drawable/bg_news_card_outer"
-                            android:orientation="vertical">
-
-                            <FrameLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="220dp">
-                                <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/news2new" android:scaleType="centerCrop" />
-                                <View android:layout_width="match_parent" android:layout_height="35dp" android:layout_gravity="top" android:rotation="180" android:background="@drawable/bg_news_image_fade" />
-                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="top|center_horizontal" android:layout_marginTop="12dp" android:text="APRIL 08, 2026" android:textColor="@android:color/white" android:textSize="13sp" android:textStyle="bold" />
-                            </FrameLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:background="@drawable/bg_news_text_section"
-                                android:orientation="vertical"
-                                android:padding="18dp"
-                                android:gravity="center">
-                                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="&quot;Zamboanga City declares ‘state of calamity’ due to oil crisis.&quot;" android:textAlignment="center" android:textColor="@android:color/white" android:textSize="14sp" />
-                                <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnViewMore2" android:layout_width="230dp" android:layout_height="44dp" android:layout_marginTop="16dp" android:background="@drawable/bg_view_more" android:text="VIEW MORE" android:textAllCaps="false" android:textColor="@android:color/white" android:textStyle="bold" />
-                            </LinearLayout>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/bg_news_card_outer"
-                            android:orientation="vertical">
-
-                            <FrameLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="220dp">
-                                <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/news3new" android:scaleType="centerCrop" />
-                                <View android:layout_width="match_parent" android:layout_height="35dp" android:layout_gravity="top" android:rotation="180" android:background="@drawable/bg_news_image_fade" />
-                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="top|center_horizontal" android:layout_marginTop="12dp" android:text="MARCH 17, 2026" android:textColor="@android:color/white" android:textSize="13sp" android:textStyle="bold" />
-                            </FrameLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:background="@drawable/bg_news_text_section"
-                                android:orientation="vertical"
-                                android:padding="18dp"
-                                android:gravity="center">
-                                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="&quot;Kalis Brigade troops further strengthens disaster preparedness.&quot;" android:textAlignment="center" android:textColor="@android:color/white" android:textSize="14sp" />
-                                <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnViewMore3" android:layout_width="230dp" android:layout_height="44dp" android:layout_marginTop="16dp" android:background="@drawable/bg_view_more" android:text="VIEW MORE" android:textAllCaps="false" android:textColor="@android:color/white" android:textStyle="bold" />
-                            </LinearLayout>
-                        </LinearLayout>
-
                     </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/bg_news_card_outer"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="220dp">
+                            <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/news2new" android:scaleType="centerCrop" />
+                            <View android:layout_width="match_parent" android:layout_height="35dp" android:layout_gravity="top" android:rotation="180" android:background="@drawable/bg_news_image_fade" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="top|center_horizontal" android:layout_marginTop="12dp" android:text="APRIL 08, 2026" android:textColor="@android:color/white" android:textSize="13sp" android:textStyle="bold" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_news_text_section"
+                            android:orientation="vertical"
+                            android:padding="18dp"
+                            android:gravity="center">
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="&quot;Zamboanga City declares ‘state of calamity’ due to oil crisis.&quot;" android:textAlignment="center" android:textColor="@android:color/white" android:textSize="14sp" />
+                            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnViewMore2" android:layout_width="230dp" android:layout_height="44dp" android:layout_marginTop="16dp" android:background="@drawable/bg_view_more" android:text="VIEW MORE" android:textAllCaps="false" android:textColor="@android:color/white" android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_news_card_outer"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="220dp">
+                            <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/news3new" android:scaleType="centerCrop" />
+                            <View android:layout_width="match_parent" android:layout_height="35dp" android:layout_gravity="top" android:rotation="180" android:background="@drawable/bg_news_image_fade" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="top|center_horizontal" android:layout_marginTop="12dp" android:text="MARCH 17, 2026" android:textColor="@android:color/white" android:textSize="13sp" android:textStyle="bold" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_news_text_section"
+                            android:orientation="vertical"
+                            android:padding="18dp"
+                            android:gravity="center">
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="&quot;Kalis Brigade troops further strengthens disaster preparedness.&quot;" android:textAlignment="center" android:textColor="@android:color/white" android:textSize="14sp" />
+                            <androidx.appcompat.widget.AppCompatButton android:id="@+id/btnViewMore3" android:layout_width="230dp" android:layout_height="44dp" android:layout_marginTop="16dp" android:background="@drawable/bg_view_more" android:text="VIEW MORE" android:textAllCaps="false" android:textColor="@android:color/white" android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
                 </LinearLayout>
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
-    </FrameLayout>
+    </RelativeLayout>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
